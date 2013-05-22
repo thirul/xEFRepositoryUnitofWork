@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{82FE4A5D-E3C5-4EFE-80FB-240006209921}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>xEFRepositoryUnitofWork.Services</RootNamespace>
+    <AssemblyName>xEFRepositoryUnitofWork.Services</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CategoryService.cs" />
+    <Compile Include="ProductService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\xEFRepositoryUnitofWork.Data.Contract\xEFRepositoryUnitofWork.Data.Contract.csproj">
+      <Project>{D61DD729-3012-40AA-9E62-523D5C0EC9DF}</Project>
+      <Name>xEFRepositoryUnitofWork.Data.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\xEFRepositoryUnitofWork.Data\xEFRepositoryUnitofWork.Data.csproj">
+      <Project>{06EEB6BB-6BC2-4BE0-9617-A0D3F0F47709}</Project>
+      <Name>xEFRepositoryUnitofWork.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\xEFRepositoryUnitofWork.Domain\xEFRepositoryUnitofWork.Domain.csproj">
+      <Project>{F2C68038-F10C-4F9B-B057-3129FE18F3CD}</Project>
+      <Name>xEFRepositoryUnitofWork.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\xEFRepositoryUnitofWork.Services.Contract\xEFRepositoryUnitofWork.Services.Contract.csproj">
+      <Project>{B9C77E6B-CE60-4561-8AD9-91916E5ABD74}</Project>
+      <Name>xEFRepositoryUnitofWork.Services.Contract</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

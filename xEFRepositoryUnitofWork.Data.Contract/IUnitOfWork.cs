@@ -16,7 +16,7 @@ namespace xEFRepositoryUnitofWork.Data.Contract
         /// <summary>
         /// Gets the products.
         /// </summary>
-        IRepository<Product> Products { get; }
+        IProductRepository Products { get; }
 
         /// <summary>
         /// Gets the categories.

@@ -37,12 +37,12 @@ namespace xEFRepositoryUnitofWork.Data
         /// <summary>
         /// Gets the products.
         /// </summary>
-        public IRepository<Product> Products { get { return new EFRepository<Product>(this.DbContext); } }
+        public IProductRepository Products { get { return new ProductRepository(this.DbContext); } }
 
         /// <summary>
         /// Gets the categories.
         /// </summary>
-        public IRepository<Category> Categories { get { return new EFRepository<Category>(this.DbContext); } }
+        public IRepository<Category> Categories { get { return GetGenericRepository<Category>(); } }
 
         #endregion Members
 
@@ -125,5 +125,13 @@ namespace xEFRepositoryUnitofWork.Data
         }
 
         #endregion public methods
+
+
+        #region private methods
+        private IRepository<T> GetGenericRepository<T>() where T : class
+        {
+            return new EFRepository<T>(this.DbContext);
+        }
+        #endregion
     }
 }
